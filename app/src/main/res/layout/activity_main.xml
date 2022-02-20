@@ -5,10 +5,88 @@
 	android:layout_height="fill_parent"
 	android:orientation="vertical">
 
-	<TextView
-		android:layout_width="wrap_content"
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="15dp"
+			android:background="#00C6FF">
+
+			<ImageView
+				android:src="@drawable/bot"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_marginRight="15dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Lou bot"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_gravity="center_vertical"
+				android:textColor="#FFFFFF"
+				android:textSize="20sp"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<ScrollView
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="Hello World"
-		android:textAppearance="?android:attr/textAppearanceLarge"/>
+		android:layout_weight="1.0"
+		android:id="@+id/scrollView"
+		android:fillViewport="true">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:id="@+id/msgField">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="left"
+				android:id="@+id/welcomeBot"
+				android:padding="10dp"
+				android:background="@drawable/chat_bg"
+				android:textSize="20sp"
+				android:layout_marginBottom="10dp"/>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="10dp">
+
+		<EditText
+			android:layout_width="wrap_content"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:hint="Type your message"
+			android:id="@+id/chatInput"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Send"
+			android:background="@drawable/radius"
+			android:textColor="#FEFEFE"
+			android:id="@+id/sendBtn"/>
+
+	</LinearLayout>
 
 </LinearLayout>
+
