@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#FFFFFF"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:paddingTop="5dp"
+		android:padding="15dp">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="20dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Username"
+				android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+			<EditText
+				android:layout_width="match_parent"
+				android:ems="10"
+				android:layout_height="wrap_content"
+				android:id="@+id/signupUsername"
+				android:hint="John Doe"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="20dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Email"
+				android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+			<EditText
+				android:layout_width="match_parent"
+				android:ems="10"
+				android:layout_height="wrap_content"
+				android:id="@+id/signupEmail"
+				android:hint="johndoe@gmail.com"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="20dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Password"
+				android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+			<EditText
+				android:layout_width="match_parent"
+				android:inputType="textPassword"
+				android:layout_height="wrap_content"
+				android:ems="10"
+				android:id="@+id/signupPassword"/>
+
+		</LinearLayout>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="S I G N U P"
+			android:textColor="#FFFFFF"
+			android:background="@drawable/radius"
+			android:id="@+id/createAccountBtn"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+
