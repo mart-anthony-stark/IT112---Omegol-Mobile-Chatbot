@@ -15,7 +15,7 @@ public class Splash extends Activity {
 		//Remove title bar
 		getActionBar().hide();
 		
-		GlobalState.addUser("test","test@gmail.com","password");
+		GlobalState.addUser("test user","test@gmail.com","password");
 		
 		Timer t = new Timer();
 		t.schedule(new TimerTask(){
