@@ -18,6 +18,11 @@ public class MainActivity extends Activity {
 	private Button sendBtn;
 	private EditText chatInput;
 	private String username;
+	private Random r = new Random();
+	private String[][] req = GlobalState.req;
+	private String[][] res = GlobalState.res;
+	private String[] defaultReply = GlobalState.defaultReply;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,22 +80,26 @@ public class MainActivity extends Activity {
 	
 	//Method to determine the chatbot response
 	void response(String msg){
-		String[][] req = GlobalState.req;
-		String[][] res = GlobalState.res;
-		
+		boolean found = false;
 		for(int i=0; i< req.length; i++){
 			try{
 			boolean includesMsg = Arrays.asList(req[i]).contains(msg.toLowerCase());
-			Toast.makeText(this, String.valueOf(includesMsg), Toast.LENGTH_LONG).show();
+			
 			if(includesMsg) {
 				int last = res[i].length - 1;
-				Random r = new Random();
 				int randIdx = r.nextInt(last+1);
 				sendMessage("bot", res[i][randIdx]);
+				found = true;
 			}
 			}catch(Exception e){
 				Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
 			}
+		}
+		
+		if(!found){
+			int last = defaultReply.length - 1;
+			int randIdx = r.nextInt(last+1);
+			sendMessage("bot", defaultReply[randIdx]);
 		}
 	}
 } 
