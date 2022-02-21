@@ -3,7 +3,7 @@ package com.mobiledev.myapp;
 import android.app.*;
 import android.content.*;
 import android.os.*;
-import android.view.*;
+import android.widget.*;
 import java.util.*;
 
 public class Splash extends Activity {
@@ -17,17 +17,15 @@ public class Splash extends Activity {
 		
 		GlobalState.addUser("test user","test@gmail.com","password");
 		
+		
 		Timer t = new Timer();
 		t.schedule(new TimerTask(){
-				@Override
-				public void run()
-				{
-					// TODO: Implement this method
+				public void run(){
 					Intent intent = new Intent(Splash.this, AuthActivity.class);
 					finish();
 					startActivity(intent);
 				}
-		},2000);
+		},3000);
     }
     
 }
