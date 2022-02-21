@@ -14,8 +14,8 @@
 			android:orientation="horizontal"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:padding="15dp"
-			android:background="#DB4F46">
+			android:padding="10dp"
+			android:background="#FFFFFFFF">
 
 			<ImageView
 				android:src="@drawable/image_6"
@@ -29,7 +29,7 @@
 				android:text="Lou bot"
 				android:textAppearance="?android:attr/textAppearanceMedium"
 				android:layout_gravity="center_vertical"
-				android:textColor="#FFFFFF"
+				android:textColor="#FF000000"
 				android:textSize="20sp"/>
 
 			<LinearLayout
@@ -50,6 +50,12 @@
 		</LinearLayout>
 
 	</LinearLayout>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="#FFDB4F46"/>
 
 	<ScrollView
 		android:layout_width="match_parent"
